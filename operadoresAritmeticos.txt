@@ -1,0 +1,260 @@
+projeto simples de HTML, CSS e JavaScript para estudar operadores aritméticos. Neste exemplo, criaremos uma calculadora básica que permite ao usuário realizar operações de adição, subtração, multiplicação e divisão.
+
+ index.html:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Aritmética</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora Aritmética</h1>
+    
+    <div class="calculator">
+        <input type="number" id="numero1" placeholder="Número 1"> <!-- Entrada para o primeiro número -->
+        <select id="operacao"> <!-- Seleção da operação desejada -->
+            <option value="soma">+</option> <!-- Opção para adição -->
+            <option value="subtracao">-</option> <!-- Opção para subtração -->
+            <option value="multiplicacao">*</option> <!-- Opção para multiplicação -->
+            <option value="divisao">/</option> <!-- Opção para divisão -->
+        </select>
+        <input type="number" id="numero2" placeholder="Número 2"> <!-- Entrada para o segundo número -->
+        <button onclick="calcular()">Calcular</button> <!-- Botão para realizar o cálculo -->
+        <p id="resultado"></p> <!-- Exibição do resultado -->
+    </div>
+
+    <script src="script.js"></script> <!-- Inclusão do arquivo JavaScript -->
+</body>
+</html>
+styles.css:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+script.js:
+
+javascript
+Copy code
+function calcular() {
+    const numero1 = parseFloat(document.getElementById('numero1').value); // Obtém o primeiro número
+    const numero2 = parseFloat(document.getElementById('numero2').value); // Obtém o segundo número
+    const operacao = document.getElementById('operacao').value; // Obtém a operação selecionada
+    let resultado;
+
+    switch (operacao) {
+        case 'soma':
+            resultado = numero1 + numero2; // Realiza a adição
+            break;
+        case 'subtracao':
+            resultado = numero1 - numero2; // Realiza a subtração
+            break;
+        case 'multiplicacao':
+            resultado = numero1 * numero2; // Realiza a multiplicação
+            break;
+        case 'divisao':
+            if (numero2 === 0) {
+                resultado = 'Divisão por zero'; // Verifica a divisão por zero
+            } else {
+                resultado = numero1 / numero2; // Realiza a divisão
+            }
+            break;
+        default:
+            resultado = 'Operação inválida'; // Trata operações inválidas
+    }
+
+    document.getElementById('resultado').textContent = `Resultado: ${resultado}`; // Exibe o resultado na página
+}
+Este projeto cria uma calculadora simples que permite ao usuário realizar operações de adição, subtração, multiplicação e divisão com dois números. O JavaScript executa o cálculo com base na operação escolhida e exibe o resultado na página HTML. O CSS fornece estilos básicos para a calculadora. Certifique-se de que todos os arquivos (index.html, styles.css e script.js) estejam no mesmo diretório e abra o index.html em um navegador para testar a calculadora.
+---------------------
+User
+pode ajustar o css para um visual black e neon pink?
+
+ChatGPT
+Claro! Você pode ajustar o CSS para criar um visual com fundo preto e cores neon pink. Aqui está o código CSS modificado:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000; /* Fundo preto */
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6ac1; /* Título em neon pink */
+}
+
+.calculator {
+    background-color: #333; /* Fundo cinza escuro */
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6ac1; /* Botão em neon pink */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493; /* Cor mais intensa em hover */
+}
+Isso modificará o estilo da calculadora para ter um fundo preto, texto em neon pink e botões com cores neon pink. Certifique-se de atualizar o arquivo styles.css no seu projeto com essas alterações para ver o novo visual.
+---------------------
+User
+pode dar um destaque no resultado da operação?
+
+ChatGPT
+Certamente! Você pode adicionar um destaque no resultado da operação, por exemplo, tornando-o em negrito. Aqui está o código CSS modificado para destacar o resultado:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6ac1;
+}
+
+.calculator {
+    background-color: #333;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6ac1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#resultado {
+    font-weight: bold; /* Adiciona destaque em negrito ao resultado */
+    color: #ff6ac1; /* Define a cor do resultado como neon pink */
+}
+Com essa modificação, o resultado da operação será exibido em negrito e com a cor neon pink. Certifique-se de atualizar o arquivo styles.css no seu projeto com essas alterações para ver o resultado destacado.
+---------------------
+
+como deixar as caixas com o mesmo tamanho?
+
+ChatGPT
+Para garantir que as caixas de entrada, o seletor e o botão tenham o mesmo tamanho, você pode definir uma largura fixa para esses elementos. Aqui está o código CSS modificado para deixar as caixas com o mesmo tamanho:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6ac1;
+}
+
+.calculator {
+    background-color: #333;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Considera o padding na largura total */
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6ac1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#resultado {
+    font-weight: bold;
+    color: #ff6ac1;
+}
+Nesse código, a propriedade box-sizing foi definida como border-box para que o padding seja considerado na largura total dos elementos, garantindo que todas as caixas (input, select e button) tenham o mesmo tamanho. Isso evita que o tamanho seja afetado pelo padding. Certifique-se de atualizar o arquivo styles.css no seu projeto com essas alterações para ter as caixas com o mesmo tamanho.

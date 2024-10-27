@@ -1,26 +1,21 @@
 Calculadora Aritmética
-Bem-vindo à Calculadora Aritmética! Este é um projeto simples de HTML, CSS e JavaScript que permite que você realize operações de adição, subtração, multiplicação e divisão de forma fácil.
 
-Como Usar
-É muito simples começar a usar a calculadora. Siga estas etapas:
+Bem-vindo à Calculadora Aritmética, um projeto simples, desenvolvido para fins de estudo, utilizando HTML, CSS e JavaScript para realizar operações de adição, subtração, multiplicação e divisão.
 
-Abra o arquivo index.html no seu navegador.
+Como Usar Para utilizar a calculadora, siga estes passos:
 
-Preencha os campos Número 1 e Número 2 com os valores que você deseja calcular.
+Abra o arquivo index.html no navegador.
 
-Escolha a operação desejada no menu suspenso.
+Preencha os campos "Número 1" e "Número 2" com os valores desejados.
 
-Clique no botão "Calcular" para obter o resultado.
+Selecione a operação no menu suspenso.
 
-O resultado da operação escolhida será exibido na seção "Resultado" da página.
+Clique no botão "Calcular".
 
-Personalização
-Se você deseja personalizar a aparência da calculadora, pode ajustar o arquivo styles.css para atender às suas preferências de estilo. Você pode alterar as cores, fontes e outros elementos de design para torná-la única.
+O resultado da operação aparecerá na seção "Resultado" da página.
 
-Contribuindo
-Se você gostaria de contribuir para este projeto, sinta-se à vontade para abrir um problema ou enviar uma solicitação de pull. Estamos sempre abertos a melhorias e novas ideias.
+Personalização Para personalizar a aparência da calculadora:
 
-Licença
-Este projeto é licenciado sob a Licença MIT. Sinta-se à vontade para usá-lo, modificá-lo e distribuí-lo como desejar. Veja o arquivo LICENSE para mais detalhes.
+Edite o arquivo styles.css conforme suas preferências.
 
-Esperamos que esta calculadora seja útil para você. Divirta-se calculando!
+Altere cores, fontes e outros elementos de design para criar um visual único.
